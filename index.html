@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Jordan Steiner</title>
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+		<script src="https://use.fontawesome.com/eb7e2d2a83.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/select-css.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/component.css" />
+		<script   src="js/jquery.min.js"></script>
+		<script src="js/modernizr-custom.js"></script>
+	</head>
+	<body>
+		<main class="container">
+			<div class="pages">
+				<div class="page page--current" style="background: #1D6AE8"><!-- intro page -->
+					<div class="pater">
+						<div class="pater__text">
+							<h1>Hi, my name is Jordan &amp; welcome to my portfolio!</h1>
+							<div class="pater__subheader pater__desc">
+								<h1>Scroll through to see my work</h1>
+							</div>
+							<div class="pater__contact">
+								<a href="mailto:jasteiner11@gmail.com?Subject=Hi%20Jordan!">
+									<i class="fa fa-envelope" aria-hidden="true"></i>
+								</a>
+								<a target="_blank" href="https://www.linkedin.com/in/jordansteiner" style="padding-right: 0;">
+									<i class="fa fa-linkedin" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div><!-- /page -->
+				<div class="page" style="background: #FC4349"><!-- content page -->
+					<div class="pater">
+						<div class="pater__text">
+							<h1>Build a Better Boot.<br>My quest to redesign cleats</h1>
+							<div class="pater__desc">
+								<h1>Product Design</h1>
+							</div>
+							<div class="pater__caption">
+								<p>In a sudden epiphany, I redirected my career goals to align with my passion for creation and my background in soccer.</p>
+							</div>
+							<div class="pater__contact">
+								<a href="mailto:jasteiner11@gmail.com?Subject=Hi%20Jordan!">
+									<i class="fa fa-envelope" aria-hidden="true"></i>
+								</a>
+								<a target="_blank" href="https://www.linkedin.com/in/jordansteiner" style="padding-right: 0;">
+									<i class="fa fa-linkedin" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="page" style="background: #C802FF"><!-- content page -->
+					<div class="pater">
+						<div class="pater__text">
+							<h1>Extra Desings<br>Project Portfolio</h1>
+							<div class="pater__desc">
+								<h1>Graphic Design &amp; Branding</h1>
+							</div>
+							<div class="pater__caption">
+								<p>I helped start and run an interdisciplinary design agency to supply non-profits and small businesses design work for free.</p>
+							</div>
+							<div class="pater__contact">
+								<a href="mailto:jasteiner11@gmail.com?Subject=Hi%20Jordan!">
+									<i class="fa fa-envelope" aria-hidden="true"></i>
+								</a>
+								<a target="_blank" href="https://www.linkedin.com/in/jordansteiner" style="padding-right: 0;">
+									<i class="fa fa-linkedin" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div><!-- /pages -->
+		</main>
+		<script src="js/classie.js"></script>
+		<script src="js/main.js"></script>
+		<script>
+		(function() {
+			var colorReveal = {
+				"rgb(252, 67, 73)" : "#b9252a",
+				 "rgb(124, 0, 158)" : "#7c009e",
+				 "rgb(29, 106, 232)" : "#164fad"
+			};
+
+			var pages = [].slice.call(document.querySelectorAll('.pages > .page')),
+				currentPage = 0,
+				
+				revealerOpts = {
+					// the layers are the elements that move from the sides
+					nmbLayers : 3,
+					// bg color of each layer
+					bgcolor : ['#0092DD', '#fff', '#3E3A35'],
+					// effect classname
+					effect : 'anim--effect-4',
+					onStart : function(direction) {
+						// next page gets class page--animate-[direction]
+						var nextPage = pages[getPageChange(direction)];
+						classie.add(nextPage, 'page--animate-' + direction);
+					},
+					onEnd : function(direction) {
+						// remove class page--animate-[direction] from next page
+						var nextPage = pages[getPageChange(direction)];
+						nextPage.className = 'page';
+					}
+				};
+				revealer = new Revealer(revealerOpts);
+			
+			$(window).on('wheel', function(e) {
+				var delta = e.originalEvent.deltaY;
+
+				if (delta >= 10) reveal('bottom');
+				else if (delta <= -10) reveal('top');
+
+				return false; // this line is only added so the whole page won't scroll in the demo
+			});
+
+			document.onkeydown = function(e) {
+			    switch (e.keyCode) {
+			        case 38:
+			            reveal('bottom');
+			            break;
+			        case 40:
+			            reveal('top');
+			            break;
+			    }
+			};
+
+			function getPageChange(direction) {
+				if (direction == 'top' && currentPage != pages.length -1) {
+					return currentPage + 1;
+				}
+				else if (direction == 'bottom' && currentPage != 0) {
+					return currentPage - 1;
+				}
+				else {
+					return (currentPage == 0) ? pages.length - 1 : 0;
+				}
+			}
+
+			function reveal(direction) {
+				var callbackTime = 750,
+					callbackFn = function() {
+						classie.remove(pages[currentPage], 'page--current');
+						currentPage = getPageChange(direction);
+
+						classie.add(pages[currentPage], 'page--current');	
+					};
+
+				revealer.reveal(direction, callbackTime, callbackFn);
+			}
+
+		})();
+		</script>
+	</body>
+</html>
