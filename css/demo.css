@@ -270,6 +270,27 @@ a:focus {
 	margin-top: 1em;
 }
 
+.pater__arrow {
+	position: absolute;
+    top: 6%;
+    right: 3%;
+}
+
+.pater__arrow i {
+	-moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    -webkit-transition: all .15s ease-in;
+    transition: color .15s ease-in;
+
+    color: white;
+	font-size: 300%;
+}
+
+.pater__arrow i:hover {
+	cursor: pointer;
+	color: #d8d7d7
+}
+
 .pater__caption {
 	position: absolute;
 	bottom: 25%;
@@ -284,10 +305,10 @@ a:focus {
 }
 
 .pater__contact a {
-	-moz-transition: all .1s ease-in;
-    -o-transition: all .1s ease-in;
-    -webkit-transition: all .1s ease-in;
-    transition: color .1s ease-in;
+	-moz-transition: all .15s ease-in;
+    -o-transition: all .15s ease-in;
+    -webkit-transition: all .15s ease-in;
+    transition: color .15s ease-in;
 
 	color: inherit;
 	padding-right: 10px;
@@ -296,6 +317,7 @@ a:focus {
 .pater__contact a:hover {
 	color: #d8d7d7
 }
+
 .pater__contact i {
 	font-size: 2em;
 }
@@ -358,7 +380,7 @@ a:focus {
 	border-top-color: white;
 }
 
-@media screen and (max-width: 1101px) {
+@media screen and (max-width: 1141px) {
 	.pater__caption {
 		visibility: hidden;
 	}
@@ -414,6 +436,10 @@ a:focus {
 	}
 	.pater__img {
 		width: 160px;
+	}
+
+	.pater__arrow {
+		top: 10%;
 	}
 	.container .page {
 		padding: 2.85em;
