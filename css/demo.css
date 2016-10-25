@@ -21,6 +21,209 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/*  SECTIONS  */
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+/*  COLUMN SETUP  */
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child { margin-left: 0; }
+
+/*  GROUPING  */
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+.group { zoom:1; /* For IE 6/7 */ }
+
+/*  GRID OF TWELVE  */
+.span_12_of_12 {
+	width: 100%;
+}
+
+.span_11_of_12 {
+  	width: 91.53%;
+}
+.span_10_of_12 {
+  	width: 83.06%;
+}
+
+.span_9_of_12 {
+  	width: 74.6%;
+}
+
+.span_8_of_12 {
+  	width: 66.13%;
+}
+
+.span_7_of_12 {
+  	width: 57.66%;
+}
+
+.span_6_of_12 {
+  	width: 49.2%;
+}
+
+.span_5_of_12 {
+  	width: 40.73%;
+}
+
+.span_4_of_12 {
+  	width: 32.26%;
+}
+
+.span_3_of_12 {
+  	width: 23.8%;
+}
+
+.span_2_of_12 {
+  	width: 15.33%;
+}
+
+.span_1_of_12 {
+  	width: 6.866%;
+}
+
+/*  GO FULL WIDTH BELOW 480 PIXELS */
+@media only screen and (max-width: 480px) {
+	.col {  margin: 1% 0 1% 0%; }
+    
+    .span_1_of_12, .span_2_of_12, .span_3_of_12, .span_4_of_12, .span_5_of_12, .span_6_of_12, .span_7_of_12, .span_8_of_12, .span_9_of_12, .span_10_of_12, .span_11_of_12, .span_12_of_12 {
+	width: 100%; 
+	}
+}
+
+.page__content-three {
+	background-image: url("http://www.rmtbuddy.com/houtai1-by/upload/images/fifa15.jpg");
+    min-height: 600px;
+    /*background-attachment: fixed;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    color: white;
+}
+
+.page__content-four {
+	background-image: url("https://static.pexels.com/photos/7103/writing-notes-idea-conference.jpg");
+    /*background-attachment: fixed;*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    color: white;
+}
+
+.page__content-header h1 {
+	text-align: center;
+	font-size: 600%;
+	padding-bottom: .3em;
+}
+
+.page__content-header h2 {
+    text-align: center;
+    font-size: 230%;
+    font-weight: 400;
+}
+
+.parallax {
+	min-height: 600px;
+}
+
+.parallax h1 {
+	position: fixed;
+    z-index: 0;
+    color: white;
+    font-size: 10em;
+    text-align: left;
+    top: 0;
+    margin-top: 0;
+    margin-left: 1%;
+}
+
+.parallax img { 
+    /* Full height */
+    width: 100%;
+    min-height: 600px;
+    position: fixed;
+    z-index: -1;
+}
+
+.page__content--main {
+}
+
+.page__content-one {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	display: block;
+	/*border: 3px solid #fff;*/
+	padding: 0em 4em 0em 1em;
+	width: 100%;
+	position: relative;
+	color: gray;
+	background: white;
+	font-weight: 100;
+}
+
+.page__content-two {
+	-webkit-box-flex: 0;
+	-ms-flex: none;
+	flex: none;
+	display: block;
+	/*border: 3px solid #fff;*/
+	padding: 0em 4em 0em 1em;
+	width: 100%;
+	position: relative;
+	color: rgb(43, 42, 88);
+	background: #dedede;
+}
+
+.page__content-two--left p {
+	font-size: 1.3em;
+	padding-right: 5%;
+	padding-left: 5%; 
+	text-align: left;
+	font-weight: 100;
+}
+
+.page__content-two--left h2 {
+	font-size: 250%;
+    padding-left: 5%;
+    text-align: left;
+    font-weight: 400;
+}
+
+.page__content-two--right p {
+	font-size: 1.3em;
+	padding-right: 5%;
+	padding-left: 5%; 
+	text-align: right;
+	font-weight: 100;
+}
+
+.page__content-two--right h2 {
+	font-size: 250%;
+    padding-right: 5%;
+    text-align: right;
+    font-weight: 400;
+}
+
+.page__content-text {
+	position: absolute;
+	bottom: 3%;
+	padding-right: 3em;
+}
+.page__content-text p {
+	font-size: 1.3em;
+}
+
 a {
 	outline: none;
 	color: #45a8f1;
