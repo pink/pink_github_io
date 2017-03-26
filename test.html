@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Jordan Steiner</title>
-        <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600" rel="stylesheet">
         <script src="https://use.fontawesome.com/eb7e2d2a83.js"></script>
         <link rel="stylesheet" type="text/css" href="css/normalize.css" />
         <link rel="stylesheet" type="text/css" href="css/select-css.css" />
@@ -18,7 +18,7 @@
     <body>
         <main class="container">
             <div class="pages">
-                <div class="page__content--main page page--current" id="difference-content" style="padding: 0; position: fixed; visibility: visible; background: #FC4349; overflow-y: scroll;"><!-- content page -->
+                <div class="page__content--main page page--current" id="difference-content" style="padding: 0; position: fixed; visibility: visible; background: #DC3B40; overflow-y: scroll;"><!-- content page -->
                     <div class="block section group">
                         <div class="col span_8_of_12"> 
                             <div class="page__content--main-body">
@@ -92,6 +92,15 @@
                             <div class="col span_2_of_12"></div>
                             <div class="col span_8_of_12">
                                 <p class="demo-gif"><img src="img/difference_demo.gif" /></p>
+                            </div>
+                            <div class="col span_2_of_12"></div>
+                        </div>
+                        <div class="section group">
+                            <div class="col span_2_of_12"></div>
+                            <div class="col span_8_of_12">
+                                <nav class="link-effect">
+                                    <a href="#">Check out Difference</a>
+                                </nav>
                             </div>
                             <div class="col span_2_of_12"></div>
                         </div>
@@ -244,7 +253,7 @@
 
         var colorScroll =
         {
-            "difference-content": ["#FC4349", "#2C3E50", "#6DBCDB", "#466387"]
+            "difference-content": ["#DC3B40", "#2C3E50", "#466387"]
         }
         $(function() {
            $('.page--current').scroll(function () {
@@ -257,11 +266,8 @@
               else if (pos > 500 && pos <= 1300) {
                     $(this)[0].style['background'] = getColor(id, 1);
               }
-              else if (pos > 1300 && pos <= 2200) {
+              else if (pos > 1300) {
                     $(this)[0].style['background'] = getColor(id, 2);
-              }
-              else {
-                    $(this)[0].style['background'] = getColor(id, 3);
               }
            });
         });
