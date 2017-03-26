@@ -13,12 +13,42 @@
 }
 
 body {
-	font-family: 'Raleway', sans-serif;
+	font-family: sans-serif;
 	color: #444;
 	background: #f6f6f6;
 	line-height: 1;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+}
+
+.block {
+	min-height: 850px;
+}
+
+.demo-gif p {
+	text-align: center;
+	min-height: 500px;
+}
+
+.demo-gif img {
+	min-width: 100%;
+	box-shadow: 0 0 2em .5em rgba(0,0,0,.25);
+}
+
+.content__paragraph {
+	color: white;
+	text-align: center;
+}
+
+.content__paragraph p {
+	font-weight: 300;
+    font-size: 1.6em;
+    line-height: 1.3em;
+}
+
+.content__paragraph h1 {
+	font-weight: 600;
+	font-size: 3.5em;
 }
 
 /*  SECTIONS  */
@@ -34,7 +64,7 @@ body {
 	float:left;
 	margin: 1% 0 1% 1.6%;
 }
-.col:first-child { margin-left: 0; }
+/*.col:first-child { margin-left: 0; }*/
 
 /*  GROUPING  */
 .group:before,
@@ -100,12 +130,7 @@ body {
 }
 
 .page__content-three {
-	background-image: url("http://www.rmtbuddy.com/houtai1-by/upload/images/fifa15.jpg");
     min-height: 600px;
-    /*background-attachment: fixed;*/
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     z-index: 1;
     color: white;
 }
@@ -132,22 +157,21 @@ body {
     font-weight: 400;
 }
 
-.parallax {
+.page__content--main-body {
 	min-height: 600px;
 }
 
-.parallax h1 {
-	position: fixed;
-    z-index: 0;
+.page__content--main-body h1 {
+	z-index: -1;
     color: white;
-    font-size: 10em;
+    font-size: 5em;
     text-align: left;
     top: 0;
     margin-top: 0;
     margin-left: 1%;
 }
 
-.parallax img { 
+.page__content--main-body img { 
     /* Full height */
     width: 100%;
     min-height: 600px;
@@ -155,7 +179,30 @@ body {
     z-index: -1;
 }
 
+.page__content--main-summary {
+	max-width: 75%;
+    border-color: white;
+    border-top-style: solid;
+    border-width: thin;
+    color: white;
+}
+
+.page__content--main-summary p {
+	margin-top: .5em;
+}
+
+.page__content--main-skills p {
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.page__content--main-caption p {
+	font-size: 1.75em;
+	font-weight: 300;
+}
+
 .page__content--main {
+	transition: 1s all;
 }
 
 .page__content-one {
@@ -167,9 +214,8 @@ body {
 	padding: 0em 4em 0em 1em;
 	width: 100%;
 	position: relative;
-	color: gray;
-	background: white;
 	font-weight: 100;
+	min-height: 700px;
 }
 
 .page__content-two {
@@ -182,7 +228,6 @@ body {
 	width: 100%;
 	position: relative;
 	color: rgb(43, 42, 88);
-	background: #dedede;
 }
 
 .page__content-two--left p {
@@ -494,12 +539,12 @@ a:focus {
 	color: #d8d7d7
 }
 
-.pater__caption {
+/*.pater__caption {
 	position: absolute;
 	bottom: 25%;
 	right: 15%;
 	left: 1em;
-}
+}*/
 
 .pater__contact {
 	position: absolute;
@@ -526,7 +571,8 @@ a:focus {
 }
 
 .pater__caption p {
-	font-size: 135%;
+	font-size: 115%;
+	line-height: 120%;
 }
 
 
@@ -663,4 +709,14 @@ a:focus {
 	.pater__img {
 		max-width: 75%;
 	}
+}
+
+.page__cover {
+	position: absolute;
+	top: 33%;
+	margin-left: 55%;
+}
+
+.page__cover img {
+	max-width: 30em;
 }
