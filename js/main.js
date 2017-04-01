@@ -4,7 +4,7 @@
  *
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
- * 
+ *
  * Copyright 2016, Codrops
  * http://www.codrops.com
  */
@@ -38,7 +38,7 @@
 		};
 	};
 	function extend( a, b ) {
-		for( var key in b ) { 
+		for( var key in b ) {
 			if( b.hasOwnProperty( key ) ) {
 				a[key] = b[key];
 			}
@@ -160,7 +160,7 @@
 		if( direction === 'cornertopleft' || direction === 'cornertopright' || direction === 'cornerbottomleft' || direction === 'cornerbottomright' ) {
 			var pageDiagonal = Math.sqrt(Math.pow(winsize.width, 2) + Math.pow(winsize.height, 2));
 			widthVal = heightVal = pageDiagonal + 'px';
-			
+
 			if( direction === 'cornertopleft' ) {
 				transform = 'translate3d(-50%,-50%,0) rotate3d(0,0,1,135deg) translate3d(0,' + pageDiagonal + 'px,0)';
 			}
@@ -202,7 +202,7 @@
 				if( layerscomplete === 1 ) {
 					classie.remove(self.revealerWrapper, 'revealer--' + direction || 'revealer--right');
 					classie.remove(self.revealerWrapper, 'revealer--animate');
-					
+
 					self.revealerWrapper.style.opacity = 0;
 					self.isAnimating = false;
 
@@ -211,7 +211,7 @@
 				}
 			});
 		});
-			
+
 		// reveal fn callback
 		if( typeof callback === 'function') {
 			if( this.callbacktimeout ) {

@@ -20,7 +20,7 @@
             <div class="pages">
                 <div class="page__content--main page page--current" id="difference-content" style="padding: 0; position: fixed; visibility: visible; background: #DC3B40; overflow-y: scroll;"><!-- content page -->
                     <div class="block section group">
-                        <div class="col span_8_of_12"> 
+                        <div class="col span_8_of_12">
                             <div class="page__content--main-body">
                                 <h1>Difference.<br>Changing the world through passive donations</h1>
                                 <div class="pater__arrow">
@@ -68,7 +68,7 @@
                         <div class="section group">
                             <div class="col span_2_of_12"></div>
                             <div class="col span_8_of_12">
-                                <p class="demo-gif"><img src="img/difference_login.gif" /></p>
+                                <p class="demogif-"><img src="img/difference_login.gif" /></p>
                             </div>
                             <div class="col span_2_of_12"></div>
                         </div>
@@ -90,8 +90,8 @@
                     <div class="page__content-one">
                         <div class="section group">
                             <div class="col span_2_of_12"></div>
-                            <div class="col span_8_of_12">
-                                <p class="demo-gif"><img src="img/difference_demo.gif" /></p>
+                            <div class="col span_8_of_12 demo-gif">
+                                <p class=""><img src="img/difference_demo.gif" /></p>
                             </div>
                             <div class="col span_2_of_12"></div>
                         </div>
@@ -163,11 +163,11 @@
                             nextPage = pages[getPageChange(direction)];
                             nextPage.className = 'page';
                         }
-                        
+
                     }
                 };
                 // revealer = new Revealer(revealerOpts);
-            
+
             $(window).on('wheel', function(e) {
                 if (!content) {
                     var delta = e.originalEvent.deltaY;
@@ -189,6 +189,34 @@
                         break;
                 }
             };
+
+            document.addEventListener('touchstart', handleTouchStart, false);
+            document.addEventListener('touchmove', handleTouchMove, false);
+
+            var yDown = null;
+
+            function handleTouchStart(evt) {
+                yDown = evt.touches[0].clientY;
+            };
+
+            function handleTouchMove(evt) {
+                if (!yDown) {
+                    return;
+                }
+
+                var yUp = evt.touches[0].clientY;
+
+                var yDiff = yDown - yUp;
+
+                if ( yDiff > 0 ) {
+                    reveal('bottom');
+                } else {
+                    reveal('top');
+                }
+
+                yDown = null;
+            };
+
 
             function openContent(dir) {
                 reveal(dir);
@@ -226,17 +254,17 @@
                     callbackFn = function() {
                         if (direction == 'right') {
                             classie.remove(pages[currentPage], 'page--current');
-                            classie.add(contentPages[currentPage - 1], 'page--current');    
+                            classie.add(contentPages[currentPage - 1], 'page--current');
                         } else if (direction == 'left') {
                             classie.remove(contentPages[currentPage - 1], 'page');
                             classie.remove(contentPages[currentPage - 1], 'page--current');
                             contentPages[currentPage - 1].style["position"] = "relative";
-                            classie.add(pages[currentPage], 'page--current');   
+                            classie.add(pages[currentPage], 'page--current');
                         } else {
                             classie.remove(pages[currentPage], 'page--current');
                             currentPage = getPageChange(direction);
 
-                            classie.add(pages[currentPage], 'page--current');   
+                            classie.add(pages[currentPage], 'page--current');
                         }
                     };
 
@@ -246,7 +274,7 @@
         })();
 
         function getColor(id, pos) {
-            return (pos <= colorScroll[id].length - 1) ? 
+            return (pos <= colorScroll[id].length - 1) ?
                         colorScroll[id][pos] :
                         colorScroll[id][colorScroll[id].length - 1];
         }

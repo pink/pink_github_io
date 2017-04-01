@@ -92,7 +92,7 @@
 				</div>
 				<div class="page__content page__content--main" id="difference-content" style="padding: 0; position: fixed; background: #DC3B40; overflow-y: scroll;"><!-- content page -->
                     <div class="block section group">
-                        <div class="col span_8_of_12"> 
+                        <div class="col span_8_of_12">
                             <div class="page__content--main-body">
                                 <h1>Difference.<br>Changing the world through passive donations</h1>
                                 <div class="pater__arrow">
@@ -139,9 +139,11 @@
                     <div class="page__content-one">
                         <div class="section group">
                             <div class="col span_2_of_12"></div>
-                            <div class="col span_8_of_12">
-                                <p class="demo-gif"><img src="img/difference_login.gif" /></p>
-                            </div>
+                            <span class="demo-gif">
+	                            <div class="col span_8_of_12">
+	                                <p class=""><img src="img/difference_login.gif" /></p>
+	                            </div>
+	                        </span>
                             <div class="col span_2_of_12"></div>
                         </div>
                     </div>
@@ -152,7 +154,7 @@
                             <div class="col span_6_of_12">
                                 <div class="content__paragraph">
                                     <h1>User-centric design</h1>
-                                    <p>We designed the application with the goal of maximizing a user's inclination to keep up with their donations. In our research we observed that users of similar apps felt most engaged when there was a social component. After running through multiple mockups and extensive user testing, we ended up with our final UI.</p>
+                                    <p>We designed the application with the goal of maximizing a user's inclination to keep up with their donations. In our research, we observed that users of similar apps felt most engaged when there was a social component. After running through multiple mockups and extensive user testing, we ended up with our final UI.</p>
                                 </div>
                             </div>
                             <div class="col span_3_of_12">
@@ -180,7 +182,7 @@
                 </div>
 				<div class="page__content" id="papali-content" style="padding: 0; position: fixed; background: #A4B4B8; overflow-y: scroll;"><!-- content page -->
 					<div class="block section group">
-                        <div class="col span_8_of_12"> 
+                        <div class="col span_8_of_12">
                             <div class="page__content--main-body">
                                 <h1>The Curious<br> Case of Dr. Papali</h1>
                                 <div class="pater__arrow">
@@ -215,8 +217,8 @@
                             </div>
                             <div class="col span_6_of_12">
                                 <div class="content__paragraph">
-                                    <h1>Make giving easy</h1>
-                                    <p>Everyone has some organization whose mission they support. While donating $50-100 at one time can often be tough to stomach, people hardly notice when they toss a dime or quarter in the jar. With Difference we took this concept and ran with it, the idea being that we could aggregate these small deltas in user purchases over a month and allocate the sum to a pre-selected group of organizations they supported.</p>
+                                    <h1>Telling the story</h1>
+                                    <p>Dr. Papali contacted me in the summer of 2016 asking for help sharing his experiences with the world. He wanted a blog that allowed him to periodically post op-eds that he had written over the years, as well as interact with his readers in a forum-like manner. Given <b>the requirement that he did not want to spend a dime on hosting data, but still maintain his own domain</b>, this presented a challenge.</p>
                                 </div>
                             </div>
                             <div class="col span_3_of_12">
@@ -227,7 +229,7 @@
                         <div class="section group">
                             <div class="col span_2_of_12"></div>
                             <div class="col span_8_of_12">
-                                <p class="demo-gif"><img src="img/difference_login.gif" /></p>
+                                <p class="demo-gif"><img src="img/alphyPapali_desktop.gif" /></p>
                             </div>
                             <div class="col span_2_of_12"></div>
                         </div>
@@ -238,8 +240,8 @@
                             </div>
                             <div class="col span_6_of_12">
                                 <div class="content__paragraph">
-                                    <h1>User-centric design</h1>
-                                    <p>We designed the application with goal of maximizing a user's inclination to keep up with their donations. In our research we observed that users of similar apps felt most engaged when there was a social component. After running through multiple mockups and extensive user testing, we ended up with our final UI.</p>
+                                    <h1>Blogging on a budget</h1>
+                                    <p>In order to meet his needs, while not incurring any costs, I used Medium.com as store to host the actual blog posts and comments. The idea was that users would land on his website and see blog snippets, parsed from his account on Medium, and then be able to click on them to go to the actual article. Since Medium did not have any formal API for this, I employed Yahoo Query Language (YQL) to serve as an endpoint for retrieving the parsed information</p>
                                 </div>
                             </div>
                             <div class="col span_3_of_12">
@@ -250,7 +252,7 @@
                         <div class="section group">
                             <div class="col span_2_of_12"></div>
                             <div class="col span_8_of_12">
-                                <p class="demo-gif"><img src="img/difference_demo.gif" /></p>
+                                <p class="demo-gif"><img src="img/alphyPapali_medium.gif" /></p>
                             </div>
                             <div class="col span_2_of_12"></div>
                         </div>
@@ -258,7 +260,7 @@
                             <div class="col span_2_of_12"></div>
                             <div class="col span_8_of_12">
                                 <nav class="link-effect">
-                                    <a target="_blank" href="http://goldensnitch.github.io/donationWeb/">Check out Difference</a>
+                                    <a target="_blank" href="http://abapapali.net">Check out the blog</a>
                                 </nav>
                             </div>
                             <div class="col span_2_of_12"></div>
@@ -322,11 +324,11 @@
 							nextPage = pages[getPageChange(direction)];
 							nextPage.className = 'page';
 						}
-						
+
 					}
 				};
 				revealer = new Revealer(revealerOpts);
-			
+
 			$(window).on('wheel', function(e) {
 				if (!content) {
 					var delta = e.originalEvent.deltaY;
@@ -348,6 +350,37 @@
 			            break;
 			    }
 			};
+
+			document.addEventListener('touchstart', handleTouchStart, false);
+            document.addEventListener('touchmove', handleTouchMove, false);
+
+            var yDown = null;
+
+            function handleTouchStart(evt) {
+            	if (!content) {
+                	yDown = evt.touches[0].clientY;
+                }
+            };
+
+            function handleTouchMove(evt) {
+            	if (!content) {
+	                if (!yDown) {
+	                    return;
+	                }
+
+	                var yUp = evt.touches[0].clientY;
+
+	                var yDiff = yDown - yUp;
+
+	                if ( yDiff > 0 ) {
+	                    reveal('bottom');
+	                } else {
+	                    reveal('top');
+	                }
+
+	                yDown = null;
+	            }
+            };
 
 			function openContent(dir) {
 				reveal(dir);
@@ -385,18 +418,18 @@
 					callbackFn = function() {
 						if (direction == 'right') {
 							classie.remove(pages[currentPage], 'page--current');
-							classie.add(contentPages[currentPage - 1], 'page--current');	
+							classie.add(contentPages[currentPage - 1], 'page--current');
 							attachScroll();
 						} else if (direction == 'left') {
 							classie.remove(contentPages[currentPage - 1], 'page');
 							classie.remove(contentPages[currentPage - 1], 'page--current');
 							contentPages[currentPage - 1].style["position"] = "relative";
-							classie.add(pages[currentPage], 'page--current');	
+							classie.add(pages[currentPage], 'page--current');
 						} else {
 							classie.remove(pages[currentPage], 'page--current');
 							currentPage = getPageChange(direction);
 
-							classie.add(pages[currentPage], 'page--current');	
+							classie.add(pages[currentPage], 'page--current');
 						}
 					};
 
@@ -405,30 +438,65 @@
 
 		})();
 
-		function getColor(id, pos) {
-            return (pos <= colorScroll[id].length - 1) ? 
-                        colorScroll[id][pos] :
-                        colorScroll[id][colorScroll[id].length - 1];
+		function getBackground(id, pos) {
+            return (pos <= backgroundColors[id].length - 1) ?
+                        backgroundColors[id][pos] :
+                        backgroundColors[id][backgroundColors[id].length - 1];
         }
 
-        var colorScroll =
-        {
-            "difference-content": ["#DC3B40", "#2C3E50", "#466387"]
+        function getTextColor(id, pos) {
+        	return (pos <= textColors[id].length - 1) ?
+        				textColors[id][pos] :
+        				textColors[id][textColors[id].length - 1];
         }
+
+        var backgroundColors =
+        {
+            "difference-content": 	["#DC3B40", "#2C3E50", "#466387"],
+            "papali-content"	: 	["#A4B4B8", "#474E50", "#E6E6E6"]
+        }
+
+        var textColors =
+        {
+        	"difference-content": 	["#fff"],
+        	"papali-content"	: 	["#fff", "#fff", "#5A5A5A"]
+        }
+
+        var linkColor = document.createElement("style");
+		linkColor.innerHTML =
+		 ".link-effect a::before, .link-effect a::after {" +
+		    "background: #fff;" +
+		  "}";
+
+		document.head.appendChild(linkColor);
+
         function attachScroll() {
            $('.page--current').scroll(function () {
               let pos = $(this).scrollTop();
               let id = $(this)[0].id;
-              console.log(pos);
+              let textColor;
+
               if (pos <= 500) {
-                    $(this)[0].style['background'] = getColor(id, 0);
+                    $(this)[0].style['background'] = getBackground(id, 0);
+                    textColor = getTextColor(id, 0);
               }
-              else if (pos > 500 && pos <= 1300) {
-                    $(this)[0].style['background'] = getColor(id, 1);
+              else if (pos > 500 && pos <= 1500) {
+                    $(this)[0].style['background'] = getBackground(id, 1);
+                    textColor = getTextColor(id, 1);
               }
-              else if (pos > 1300) {
-                    $(this)[0].style['background'] = getColor(id, 2);
+              else if (pos > 1500) {
+                    $(this)[0].style['background'] = getBackground(id, 2);
+                    textColor = getTextColor(id, 2);
               }
+
+              $('.page--current .content__paragraph').toArray().forEach(function(e) {
+              		e.style['color'] = textColor;
+              });
+              $('.page--current .link-effect a').toArray().forEach(function(e) {
+              		e.style['color'] = textColor;
+              });
+
+              linkColor.innerHTML = linkColor.innerHTML.replace(/background: #[0-9a-zA-Z]*/, "background: " + textColor);
            });
         }
 		</script>
