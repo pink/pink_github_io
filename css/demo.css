@@ -23,6 +23,30 @@ body {
 
 @media (min-width:320px)  {
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+
+.pater h1 {
+	font-size: 2.9em;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.pater__desc h1 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 2.3em;
+	line-height: 1.1;
+	margin: 0;
+}
+
+.pater__caption p {
+	font-size: 115%;
+	line-height: 120%;
+}
+
+.pater__contact i {
+	font-size: 2em;
+}
+
 .page__content--main-body h1 {
 	z-index: -1;
     color: white;
@@ -32,6 +56,10 @@ body {
     margin-top: 0;
     margin-left: 1%;
     min-height: 250px;
+}
+
+.page__content-one {
+	min-height: 700px;
 }
 
 .page__content--main-skills p {
@@ -78,6 +106,10 @@ body {
     right: 3%;
 }
 
+.pater__arrow i {
+	font-size: 300%;
+}
+
 .demo-gif p {
 	text-align: center;
 	min-height: 500px;
@@ -103,10 +135,38 @@ body {
     margin-right: 15px;
 }
 
+.link-effect a {
+	font-size: 2.5em;
+}
+
 }
 
 @media (min-width:768px)  {
 /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+.pater h1 {
+	font-size: 2.9em;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.pater__desc h1 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 2.3em;
+	line-height: 1.1;
+	margin: 0;
+}
+
+.pater__caption p {
+	font-size: 115%;
+	line-height: 120%;
+}
+
+.pater__contact i {
+	font-size: 2em;
+}
+
 .page__content--main-body h1 {
 	z-index: -1;
     color: white;
@@ -116,6 +176,10 @@ body {
     margin-top: 0;
     margin-left: 1%;
     min-height: 250px;
+}
+
+.page__content-one {
+	min-height: 700px;
 }
 
 .page__content--main-skills p {
@@ -162,6 +226,10 @@ body {
     right: 3%;
 }
 
+.pater__arrow i {
+	font-size: 300%;
+}
+
 .demo-gif p {
 	text-align: center;
 	min-height: 500px;
@@ -185,10 +253,38 @@ body {
     color: white;
 }
 
+.link-effect a {
+	font-size: 2.5em;
+}
+
 }
 
 @media (min-width:1024px) {
 /* big landscape tablets, laptops, and desktops */
+
+.pater h1 {
+	font-size: 2.9em;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.pater__desc h1 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 2.3em;
+	line-height: 1.1;
+	margin: 0;
+}
+
+.pater__caption p {
+	font-size: 115%;
+	line-height: 120%;
+}
+
+.pater__contact i {
+	font-size: 2em;
+}
+
 .page__content--main-body h1 {
 	z-index: -1;
     color: white;
@@ -198,6 +294,10 @@ body {
     margin-top: 0;
     margin-left: 1%;
     min-height: 325px;
+}
+
+.page__content-one {
+	min-height: 700px;
 }
 
 .page__content--main-skills p {
@@ -244,6 +344,10 @@ body {
     right: 3%;
 }
 
+.pater__arrow i {
+	font-size: 300%;
+}
+
 .demo-gif p {
 	text-align: center;
 	min-height: 500px;
@@ -266,9 +370,37 @@ body {
     color: white;
 }
 
+.link-effect a {
+	font-size: 2.5em;
+}
+
 }
 @media (min-width:1281px) {
 /* hi-res laptops and desktops */
+
+.pater h1 {
+	font-size: 2.9em;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.pater__desc h1 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 2.3em;
+	line-height: 1.1;
+	margin: 0;
+}
+
+.pater__caption p {
+	font-size: 115%;
+	line-height: 120%;
+}
+
+.pater__contact i {
+	font-size: 2em;
+}
+
 .page__content--main-body {
 	min-height: 600px;
 }
@@ -282,6 +414,10 @@ body {
     margin-top: 0;
     margin-left: 1%;
     min-height: 325px;
+}
+
+.page__content-one {
+	min-height: 700px;
 }
 
 .page__content--main-summary p {
@@ -332,6 +468,10 @@ body {
     right: 3%;
 }
 
+.pater__arrow i {
+	font-size: 300%;
+}
+
 .demo-gif p {
 	text-align: center;
 	min-height: 500px;
@@ -352,6 +492,136 @@ body {
     border-top-style: solid;
     border-width: thin;
     color: white;
+}
+
+.link-effect a {
+	font-size: 2.5em;
+}
+
+}
+
+@media (min-width:2560px) {
+/* hi-res laptops and desktops */
+
+.pater h1 {
+	font-size: 6em;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.pater__desc h1 {
+	color: #fff;
+	font-weight: 300;
+	font-size: 3.6em;
+	line-height: 1.1;
+	margin: 0;
+}
+
+.pater__caption p {
+	font-size: 230%;
+	line-height: 120%;
+}
+
+.pater__contact i {
+	font-size: 4em;
+}
+
+.page__content--main-body {
+	min-height: 600px;
+}
+
+.page__content--main-body h1 {
+	z-index: -1;
+    color: white;
+    font-size: 10em;
+    text-align: left;
+    top: 0;
+    margin-top: 0;
+    margin-left: 1%;
+    min-height: 325px;
+}
+
+.page__content-one {
+	min-height: 1400px;
+}
+
+.page__content--main-summary p {
+	margin-top: .5em;
+}
+
+.page__content--main-skills p {
+    font-size: 2.6em;
+    font-weight: 400;
+}
+
+.page__content--main-caption p {
+	font-size: 3.5em;
+	font-weight: 300;
+}
+
+.page .page__cover {
+	position: absolute;
+	top: 33%;
+	margin-left: 55%;
+}
+
+.page__content .page__cover {
+	position: absolute;
+	top: 33%;
+	margin-left: 60%;
+}
+
+.page__cover img {
+	margin-left: 0;
+	width: 50em;
+	max-width: 200em;
+}
+
+.content__paragraph p {
+	font-weight: 300;
+    font-size: 3.2em;
+    line-height: 1.3em;
+}
+
+.content__paragraph h1 {
+	font-weight: 600;
+	font-size: 7em;
+}
+
+.pater__arrow {
+	position: absolute;
+    top: 6%;
+    right: 3%;
+}
+
+.pater__arrow i {
+	font-size: 600%;
+}
+
+.demo-gif p {
+	text-align: center;
+	min-height: 1000px;
+}
+
+.demo-gif img {
+	min-width: 100%;
+	box-shadow: 0 0 2em .5em rgba(0,0,0,.25);
+}
+
+.block {
+	min-height: 1700px;
+}
+
+.page__content--main-summary {
+	max-width: 75%;
+    border-color: white;
+    border-top-style: solid;
+    border-width: thin;
+    color: white;
+}
+
+.link-effect a {
+	font-size: 5em;
 }
 
 }
@@ -386,7 +656,6 @@ nav a:focus {
 	color: white;
 	text-shadow: none;
 	font-weight: 500;
-	font-size: 2.5em;
 }
 
 .link-effect a::before,
@@ -569,7 +838,6 @@ nav a:focus {
 	width: 100%;
 	position: relative;
 	font-weight: 100;
-	min-height: 700px;
 }
 
 .page__content-two {
@@ -800,12 +1068,6 @@ a:focus {
 	/*margin: auto 0 3em auto;*/
 }
 
-.pater h1 {
-	font-size: 2.9em;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
 .pater:hover,
 .pater:focus {
 	color: #fff;
@@ -860,14 +1122,6 @@ a:focus {
 	margin: 1em 0;
 }
 
-.pater__desc h1 {
-	color: #fff;
-	font-weight: 300;
-	font-size: 2.3em;
-	line-height: 1.1;
-	margin: 0;
-}
-
 .pater__subheader {
 	margin-top: 1em;
 }
@@ -879,7 +1133,6 @@ a:focus {
     transition: color .15s ease-in;
 
     color: white;
-	font-size: 300%;
 }
 
 .pater__arrow i:hover {
@@ -912,15 +1165,6 @@ a:focus {
 
 .pater__contact a:hover {
 	color: #d8d7d7
-}
-
-.pater__contact i {
-	font-size: 2em;
-}
-
-.pater__caption p {
-	font-size: 115%;
-	line-height: 120%;
 }
 
 
