@@ -99,6 +99,33 @@
 						<img src="img/alphyPapali_cover.png" />
 					</div>
 				</div>
+				<div id="#hobbies" class="page" style="background: #96CEB4"><!-- content page -->
+					<div class="pater">
+						<div class="pater__text">
+							<h1>What do I do<br>when I'm not coding?</h1>
+							<div class="pater__desc">
+								<h1>Hobbies</h1>
+							</div>
+							<div class="pater__arrow">
+								<i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+							</div>
+							<div class="pater__caption">
+								<p>Playing music, traveling, and stuffing my face; all on the short list of ways I like to spend my free time.</p>
+							</div>
+							<div class="pater__contact">
+								<a href="mailto:sean.kallungal@gmail.com?Subject=Hi%20Sean	!">
+									<i class="fa fa-envelope" aria-hidden="true"></i>
+								</a>
+								<a target="_blank" href="https://www.linkedin.com/in/seankallungal" style="padding-right: 0;">
+									<i class="fa fa-linkedin" aria-hidden="true"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="page__cover">
+						<img src="img/hobbies_cover.png" />
+					</div>
+				</div>
 				<div class="page__content page__content--main" id="difference-content" style="padding: 0; position: fixed; background: #DC3B40; overflow-y: scroll;"><!-- content page -->
                     <div class="block section group">
                         <div class="col span_8_of_12">
@@ -276,6 +303,79 @@
                         </div>
                     </div>
 				</div>
+				<div class="page__content" id="hobbies-content" style="padding: 0; position: fixed; background: #96CEB4; overflow-y: scroll;"><!-- content page -->
+					<div class="block section group">
+                        <div class="col span_8_of_12">
+                            <div class="page__content--main-body">
+                                <h1>What do I do<br>when I'm not coding?</h1>
+                                <div class="pater__arrow">
+                                    <i class="fa fa-arrow-circle-left" onclick="" aria-hidden="true"></i>
+                                </div>
+                                <div class="page__content--main-summary">
+                                    <div class="section group">
+                                        <div class="page__content--main-skills">
+                                            <div class="col span_4_of_12">
+                                                <p>+ Kick back</p>
+                                                <p>+ Have fun</p>
+                                            </div>
+                                        </div>
+                                        <div class="page__content--main-caption">
+                                            <div class="col span_7_of_12">
+                                                <p>Playing music, traveling, and stuffing my face; all on the short list of ways I like to spend my free time.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col span_4_of_12">
+                            <div class="page__cover">
+                                <img src="img/hobbies_cover.png" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__content-one">
+                        <div class="section group">
+                            <div class="col span_3_of_12">
+                            </div>
+                            <div class="col span_6_of_12">
+                                <div class="content__paragraph">
+                                    <h1>The world is open for play</h1>
+                                    <p>I always find myself getting wrapped up in these bubbles of significance. I manage to convince myself that <i>this</i> task or <i>this</i> goal of mine is of the utmost importance. Nothing breaks those bubbles for me quite like a trip to some <a target="_blank" href="http://imgur.com/a/98QUx">tranquil town</a> or vibrant city across the globe. Reminding myself that there are billions of concurrent lives in motion, many of which that have also deemed their bubbles to be paramount, helps keep me grounded. <b>In the grand scheme of things, perhaps rushing to catch that train isn't so important.</b></p>
+                                </div>
+                            </div>
+                            <div class="col span_3_of_12">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page__content-one">
+                        <div class="section group">
+                            <div class="col span_2_of_12"></div>
+                            <div class="col span_8_of_12 iframe" style="text-align: center">
+                                <iframe align="center" width="560" height="349" src="https://www.youtube.com/embed/Gau580-769s" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="col span_2_of_12"></div>
+                        </div>
+                    </div>
+                    <div class="page__content-one">
+                        <div class="section group">
+                            <div class="col span_2_of_12"></div>
+                            <div class="col span_8_of_12 iframe" style="text-align: center">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/uSugd1UjFWw" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="col span_2_of_12"></div>
+                        </div>
+                    </div>
+                    <div class="page__content-one">
+                        <div class="section group">
+                            <div class="col span_2_of_12"></div>
+                            <div class="col span_8_of_12 iframe" style="text-align: center">
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/WNo0v5i8je4" frameborder="0" allowfullscreen></iframe>
+                            </div>
+                            <div class="col span_2_of_12"></div>
+                        </div>
+                    </div>
+				</div>
 			</div><!-- /pages -->
 		</main>
 		<script src="js/classie.js"></script>
@@ -285,7 +385,8 @@
 			var colorReveal = {
 				"rgb(252, 67, 73)" : "#b9252a",
 				 "rgb(124, 0, 158)" : "#7c009e",
-				 "rgb(29, 106, 232)" : "#164fad"
+				 "rgb(29, 106, 232)" : "#164fad",
+				 "rgb(255, 211, 78)" : "#db9e36"
 			};
 
 			var contentPages = [].slice.call(document.querySelectorAll('.page__content'));
@@ -462,13 +563,15 @@
         var backgroundColors =
         {
             "difference-content": 	["#DC3B40", "#2C3E50", "#466387"],
-            "papali-content"	: 	["#A4B4B8", "#474E50", "#E6E6E6"]
+            "papali-content"	: 	["#A4B4B8", "#474E50", "#E6E6E6"],
+            "hobbies-content"	: 	["#96CEB4", "#10222B", "#10222B"]
         }
 
         var textColors =
         {
-        	"difference-content": 	["#fff"],
-        	"papali-content"	: 	["#fff", "#fff", "#5A5A5A"]
+        	"difference-content": 	["#FFF"],
+        	"papali-content"	: 	["#FFF", "#FFF", "#5A5A5A"],
+        	"hobbies-content"	: 	["#FFF", "#FFF", "#10222B"]
         }
 
         var linkColor = document.createElement("style");

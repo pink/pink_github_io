@@ -24,6 +24,27 @@ body {
 @media (min-width:320px)  {
 /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
 
+/*.iframe iframe {
+	box-shadow: 0 0 2em .5em rgba(0,0,0,.25);
+	width: 888px;
+	height: 500px;
+}*/
+
+.iframe {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.iframe iframe {
+	box-shadow: 0 0 2em .5em rgba(0,0,0,.25);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 65%;
+}
+
 .pater h1 {
 	font-size: 2.9em;
 	font-weight: 600;
