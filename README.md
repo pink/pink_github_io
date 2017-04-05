@@ -1,2 +1,2 @@
-# jsteinerPortfolio
-Portfolio for Jordan Steiner
+# portfolio
+personal portfolio
